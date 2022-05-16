@@ -1,0 +1,66 @@
+**  2020-06-09  **
+- MUST is online
+
+**  2020-06-10  **
+- MUSTstat: Another IP website has been added  (minor)
+- this file "updates.txt" has been added
+
+** 2020-06-11 **
+- TXDELAY: the "plane wave" option for a convex array has been added  (potentially useful)
+- IMPOLGRID: The 1st z-values of the grid have been modified  (minor)
+
+** 2020-06-12 **
+- PFIELD: The persistent variable pfieldToday was removed  (minor)
+- PFIELD: RPmono = sum(DIR.*EXP,3) => RPmono = sum(DIR.*EXP,3)/M  (not very important)
+- SIMUS: license('checkout','Distrib_Computing_Toolbox') => license('test','Distrib_Computing_Toolbox')  (may avoid an annoying warning message)
+- PFIELD, SIMUS, MKMOVIE: BSC has been replaced by RC everywhere. The term "backscattering coefficient" was physically incorrect. It has been replaced by "reflection coefficient"  (minor)
+
+** 2020-06-22 **
+- SIMUS: A conflict existed between ParPool and AdMessage (fixed)
+- PFIELD: isNEAR has been modified (not very important)
+- SPTRACK and BMODE are now part of the MUST toolbox
+
+** 2020-06-24 **
+- IQ2DOPPLER: a scalar M returned [M 1] in the code (instead of [M M]). Fixed.
+
+** 2020-08-02 **
+- PFIELD: The pressure field is now proportional to ElementWidth to be consistent with the theory. This is a multiplicative factor (not very important).
+
+** 2020-09-02 **
+- DASMTX: an error appeared when the delay vector contained a single finite element. Fixed.
+
+** 2020-09-19 **
+- GETPARAM: now returns structures with fields "focus" and "height
+- PFIELD: isNEAR has been modified, isOUT has been added (not very important)
+- PFIELD: numerical instabilities are better controlled
+
+** 2020-09-19 **
+- DASMTX: PARAM.elements has been added (upon F. Varray's request) as a hidden optional field.
+
+** 2020-12-20 **
+- GETPULSE has been added in the MUST toolbox.
+
+** 2021-01-05 **
+MAJOR UPDATES on PFIELD and SIMUS (MUST version #2)
+- An elevation focusing can now be included (3-D acoustic wave equations).
+- PARAM.TXdelay no longer available for PFIELD and SIMUS.
+- There was a bug in the two-way pulse. I don't know why... Fixed.
+- The variable isNEAR no longer exists in the code.
+- The PFIELD code has been significantly modified. The theory has been double-checked while writing the theoretical paper that will be submitted in 2021.
+
+** 2021-01-09 **
+- PFIELD: The max(X,[],'all') have been replaced by max(X(:))
+
+** 2021-01-14 **
+- SIMUS: The very small RF values are zeroed (with a smooth transition)
+
+** 2021-01-15 **
+- PFIELD: Some coefficients of the multi-Gaussian beam model were wrong! The default case (n=3) was OK.
+- n = 6 (from Wen1988) has been removed (it was incorrect!)
+- n = 5 has been fixed (it was incorrect!)
+- n = 1,2,3,4 have been fine-tuned (not important)
+- The default is now n = 4
+
+** 2021-01-29 **
+- SPTRACK: The max(X,[],'all') have been replaced by max(X(:))
+- idem with any(X,'all')
