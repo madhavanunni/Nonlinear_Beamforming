@@ -33,7 +33,7 @@ Please follow the below instructions to run the code.
 Video results are available at https://www.youtube.com/playlist?list=PLiuuVhVNWBZSYikqhd20FsVr8NTKRlZ4F
 
 2. More details of dual apodization applied to vector flow imaging is available in the following article:<br />
-A. N. Madhavanunni and Mahesh Raveendranatha Panicker, Directional Beam Focusing Based Dual Apodization Approach for Improved Vector Flow Imaging](https://doi.org/10.1109/ISBI45749.2020.9098494) _IEEE 17th International Symposium on Biomedical Imaging (ISBI)_, Iowa, USA, 2020. 
+A. N. Madhavanunni and Mahesh Raveendranatha Panicker, [Directional Beam Focusing Based Dual Apodization Approach for Improved Vector Flow Imaging](https://doi.org/10.1109/ISBI45749.2020.9098494) _IEEE 17th International Symposium on Biomedical Imaging (ISBI)_, Iowa, USA, 2020. 
 
 3. Description of the triangulation based single transmit dual angle multi-receive scheme for velocity estimation is available in the following article:<br />
 A. N. Madhavanunni and Mahesh Raveendranatha Panicker, [Triangulation based vector flow imaging with non-steered plane waves for transverse flows](https://doi.org/10.1117/12.2549253), Medical Imaging 2020: Ultrasonic Imaging and Tomography. Vol. 11319. International Society for Optics and Photonics, Houston, USA, 2020
