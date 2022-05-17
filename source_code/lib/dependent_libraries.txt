@@ -1,0 +1,7 @@
+Please note that the source code has the following dependencies:
+(a) MUST Toolbox (ver.2.0): used for robust smoothing and vector flow visualisation
+(b) Time-Frequency Toolbox (tftb-ver.0.2): used to obtain localised time-frequency plots of the beamformed signal
+
+Download the MUST toolbox from https://www.biomecardio.com/MUST/index.html (ver.2.0 or higher*), Time-Frequency Toolbox from https://tftb.nongnu.org/ (tftb-ver.0.2) and place it in source_code/lib/ before running the codes.
+
+*This version of the source code is not tested with any higher versions of MUST toolbox but it is expected to work without any issues.

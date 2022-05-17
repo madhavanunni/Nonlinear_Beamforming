@@ -1,4 +1,6 @@
 %-------------------------------------------------------------------------%
+%-- Important: Please ensure you run this code in MATLAB 2019b or higher
+%-------------------------------------------------------------------------%
 %-- Script to reproduce Figure 6 of the paper titled:
 %-- "A Nonlinear Beamforming for Enhanced Spatiotemporal Sensitivity in 
 %-- High Frame Rate Ultrasound Flow Imaging".
@@ -13,11 +15,14 @@
 %-- Time-Frequency Toolbox (https://tftb.nongnu.org/)
 %-- ##Functions used from Time-Frequency Toolbox: tfrrpwv
 %-------------------------------------------------------------------------%
-%-- Important: Please ensure you run this code in MATLAB 2019b or higher
+%-- Acknowledgements:
+%-- Franqois Auger and Patrick Flandrin. Improving the Readability of Time-Frequency 
+%-- and Time-Scale Representations by the Reassignment Method. 
+%-- IEEE Transactions on Signal Processing, 43(5), 1995. 
 %-------------------------------------------------------------------------%
 %%
 clear;
-addpath('lib\tftb-0.2\mfiles\')
+addpath(genpath('lib\'));
 
 %% -- Load DAS beamformed data
 PRF = 16000;

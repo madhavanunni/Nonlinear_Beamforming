@@ -13,6 +13,12 @@
 %-- MUST toolbox (https://www.biomecardio.com/MUST/):
 %-- ##Functions used from MUST toolbox: vplot and smoothn
 %-------------------------------------------------------------------------%
+%-- Acknowledgements:
+%-- Garcia D. Robust smoothing of gridded data in one and higher dimensions 
+%-- with missing values. Computational Statistics & Data Analysis 2010; 54:1167-1178.
+%-- Garcia D. A fast all-in-one method for automated post-processing of PIV data. 
+%-- Exp Fluids 2011; 50:1247-1259.
+%-------------------------------------------------------------------------%
 %%
 clear
 close all;
@@ -23,7 +29,7 @@ font_size = 14;
 %% Load B-mode data
 bmode_data = load('..\data\PWI_disk_Bmode.mat');
 addpath('functions\')
-addpath(genpath('lib\MUST\'))
+addpath(genpath('lib\'))
 
 %% Loading DAS beamformed data and its parameters
 load('..\results\PWI_disk_RF\DAS\bfDataParams.mat')
@@ -69,7 +75,7 @@ axis equal ij tight
 xlim([-1.25,1.25])
 ylim([1,3.5]);
 
-%% --- Figure 3(b): Vector flow images obtained with DAS 
+%% --- Figure 3(b): Vector flow image obtained with DAS 
 Vs = smoothn({-Vx.',-Vz.'},5e4,'robust'); % Robust smoothing
 Vs{1}(~ROImap) = 0;
 Vs{2}(~ROImap) = 0;
@@ -144,7 +150,7 @@ axis equal ij tight
 xlim([-1.25,1.25])
 ylim([1,3.5]);
 
-%% --- Figure 3(d): Vector flow images obtained with NLHR 
+%% --- Figure 3(d): Vector flow image obtained with NLHR 
 %Robust smoothing
 Vs = smoothn({-Vx.',-Vz.'},5e4,'robust');
 Vs{1}(~ROImap) = 0;

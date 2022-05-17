@@ -10,11 +10,29 @@
 %-- Last modified on 05 - May - 2022
 %-------------------------------------------------------------------------%
 %-- Dependencies:
+%-- MUST Toolbox(https://www.biomecardio.com/MUST/index.html) for the 
+%-- in-vitro rotating disk dataset, robust smoothing (smoothn function) and 
+%-- vector flow visualisation (vplot function): 
+%-------------------------------------------------------------------------%
+%-- Acknowledgements for the rotating disk dataset, smoothn and vplot functions :
+%-- 1. Damien Garcia. Make the most of MUST, an open-source Matlab UltraSound Toolbox
+%-- IEEE International Ultrasonics Symposium, IUS, 2021. 
+%-- 2. Craig Madiena, et al., Color and Vector Flow Imaging in Parallel Ultrasound with 
+%-- Sub-Nyquist Sampling IEEE TUFFC, 65(5):795–802, 2018. 
+%-- 3. Garcia D. Robust smoothing of gridded data in one and higher dimensions 
+%-- with missing values. Computational Statistics & Data Analysis 2010; 54:1167-1178.
+%-- 4. Garcia D. A fast all-in-one method for automated post-processing of PIV data
+%-- Exp Fluids 2011; 50:1247-1259.
+%-------------------------------------------------------------------------%
+%-- Set bfParams.DMAS = 0 for DAS beamforming
+%-- Set bfParams.beamApod = 1 and bfParams.DMAS = 1 to reproduce the
+%-- results for nonlinear beamforming reported in our article.
 %-------------------------------------------------------------------------%
 clear 
 %% Set all the required paths
 
 addpath('functions');
+addpath(genpath('lib\'));
 
 saveEnable = 1; % Set saveEnable = 1 if the results have to be saved
 %% Load RF data and get the required parameters
@@ -26,12 +44,12 @@ datasetName = "PWI_disk_RF";
 [sysPara,trueVel] = loadPWIdiscParams(dataPath,datasetName,rfDataType);
 
 %% Select the beamformer parameters
-% DMAS = 0 for DAS beamforming
-% DMAS = 1 for Nonlinear beamforming
-% beamApod = 0 for single stage apodization
-% beamApod = 1 for double stage apodization
-% DMAStype = 0 for conventional architecture
-% DMAStype = 1 for simplified architecture
+% bfParams.DMAS = 0 for DAS beamforming
+% bfParams.DMAS = 1 for Nonlinear beamforming
+% bfParams.beamApod = 0 for single stage apodization
+% bfParams.beamApod = 1 for double stage apodization
+% bfParams.DMAStype = 0 for conventional architecture
+% bfParams.DMAStype = 1 for simplified architecture
 bfParams.beamApod = 1;
 bfParams.DMAS = 1;
 bfParams.DMAStype = 1; % Donot alter this line: "bfParams.DMAStype = 1"
@@ -215,16 +233,13 @@ else
 end
 
 %% Show results
+%%-- Load B-mode data
+bmode_data = load('..\data\PWI_disk_Bmode.mat');
+
+bfMethod = bfParams.method;
 cLim = [-1.5 1.5];
 font_size = 14;
 
-%% Load B-mode data
-bmode_data = load('..\data\PWI_disk_Bmode.mat');
-addpath('functions\')
-addpath(genpath('lib\MUST\'))
-
-bfMethod = bfParams.method;
-    
 %% Velocity estimation from the beamformed data
 zl=length(gridParams.z_axis);
 xl=length(gridParams.x_axis);
@@ -247,7 +262,7 @@ Vz = interp2(gridParams.Z,gridParams.X,double(reshape(mean(mean(velocity.Vx,1),3
 % Creating a binary mask to select the region of interest (ROI) 
 ROImap = (hypot(x_new-(-7.7653e-04),z_new-0.02264)<0.01).'; 
 
-%% Figure 3(a): Color Doppler map obtained with DAS without any smoothing
+%% --- Color Doppler map
 figure;
 Vs = smoothn({-Vx.',-Vz.'},1,'robust');
 Vs{1}(~ROImap) = 0;
@@ -264,7 +279,7 @@ axis equal ij tight
 xlim([-1.25,1.25])
 ylim([1,3.5]);
 
-%% --- Figure 3(b): Vector flow images obtained with DAS 
+%% --- Vector flow image 
 Vs = smoothn({-Vx.',-Vz.'},5e4,'robust'); % Robust smoothing
 Vs{1}(~ROImap) = 0;
 Vs{2}(~ROImap) = 0;
