@@ -3,9 +3,14 @@ A Nonlinear Beamforming for Enhanced Spatiotemporal Sensitivity in High Frame Ra
 
 Repository to share scripts and functions for Nonlinear Beamforming for Ultrasound Flow Imaging. All functions are usable with agreement from their owner. 
 
+###### DATE 05-05-2022 : VERSION 1.0
+
+
 #### AUTHORS: 
 A. N. Madhavanunni and Mahesh Raveendranatha Panicker, Center for Computational Imaging, Indian Institute of Technology Palakkad, Kerala, India.
 Code Available under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) (see https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 #### ACADEMIC REFERENCES TO BE CITED:
-A. N. Madhavanunni and Mahesh Raveendranatha Panicker, A Nonlinear Beamforming for Enhanced Spatiotemporal Sensitivity in High Frame Rate Ultrasound Flow Imaging https://doi.org/10.48550/arXiv.2108.02688
+A. N. Madhavanunni and Mahesh Raveendranatha Panicker, [A Nonlinear Beamforming for Enhanced Spatiotemporal Sensitivity in High Frame Rate Ultrasound Flow Imaging](https://doi.org/10.48550/arXiv.2108.02688)
+
+Video results are available at https://www.youtube.com/playlist?list=PLiuuVhVNWBZSYikqhd20FsVr8NTKRlZ4F
