@@ -25,7 +25,7 @@ Please follow the below instructions to run the code.
 
 ##### Code Available under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) (see https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
-##### Please see the Academic references and Acknowledgements that are to be cited for any usage of the code and/or data.
+##### Please see the articles mentioned in Academic references and Acknowledgements that are to be cited for any usage of the code and/or data.
 
 #### ACADEMIC REFERENCES TO BE CITED:
 1. Details of nonlinear beamforming is available in the article by A. N. Madhavanunni and Mahesh Raveendranatha Panicker <br />
@@ -33,18 +33,18 @@ Please follow the below instructions to run the code.
 Video results are available at https://www.youtube.com/playlist?list=PLiuuVhVNWBZSYikqhd20FsVr8NTKRlZ4F
 
 2. More details of dual apodization applied to vector flow imaging is available in the following article:<br />
-A. N. Madhavanunni and Mahesh Raveendranatha Panicker, [Directional Beam Focusing Based Dual Apodization Approach for Improved Vector Flow Imaging](https://doi.org/10.1109/ISBI45749.2020.9098494) _IEEE 17th International Symposium on Biomedical Imaging (ISBI)_, Iowa, USA, 2020. 
+A. N. Madhavanunni and Mahesh Raveendranatha Panicker, [Directional Beam Focusing Based Dual Apodization Approach for Improved Vector Flow Imaging](https://doi.org/10.1109/ISBI45749.2020.9098494). _IEEE 17th International Symposium on Biomedical Imaging (ISBI)_, Iowa, USA, 2020. 
 
 3. Description of the triangulation based single transmit dual angle multi-receive scheme for velocity estimation is available in the following article:<br />
-A. N. Madhavanunni and Mahesh Raveendranatha Panicker, [Triangulation based vector flow imaging with non-steered plane waves for transverse flows](https://doi.org/10.1117/12.2549253), Medical Imaging 2020: Ultrasonic Imaging and Tomography. Vol. 11319. International Society for Optics and Photonics, Houston, USA, 2020
+A. N. Madhavanunni and Mahesh Raveendranatha Panicker, [Triangulation based vector flow imaging with non-steered plane waves for transverse flows](https://doi.org/10.1117/12.2549253). _Medical Imaging 2020: Ultrasonic Imaging and Tomography_. Vol. 11319. International Society for Optics and Photonics, Houston, USA, 2020
 
 #### Acknowledgements:
 ##### [MUST Toolbox](https://www.biomecardio.com/MUST/index.html) for the _in-vitro_ rotating disk dataset, robust smoothing (smoothn function) and vector flow visualisation (vplot function): 
-1. Damien Garcia. [Make the most of MUST, an open-source Matlab UltraSound Toolbox](https://doi.org/10.1109/IUS52206.2021.9593605). IEEE International Ultrasonics Symposium, IUS, 2021.
-2. Craig Madiena, Julia Faurie, Jonathan Poree, and Damien Garcia., [Color and Vector Flow Imaging in Parallel Ultrasound with Sub-Nyquist Sampling](https://doi.org/10.1109/TUFFC.2018.2817885). IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control, 65(5):795–802, 2018.
-3. Garcia D. [Robust smoothing of gridded data in one and higher dimensions with missing values](https://www.biomecardio.com/publis/csda10.pdf). Computational Statistics & Data Analysis 2010; 54:1167-1178.
-4. Garcia D. [A fast all-in-one method for automated post-processing of PIV data](https://www.biomecardio.com/publis/expfluids11.pdf). Exp Fluids 2011; 50:1247-1259.
+1. Damien Garcia. [Make the most of MUST, an open-source Matlab UltraSound Toolbox](https://doi.org/10.1109/IUS52206.2021.9593605). _IEEE International Ultrasonics Symposium, IUS_, 2021.
+2. Craig Madiena, Julia Faurie, Jonathan Poree, and Damien Garcia., [Color and Vector Flow Imaging in Parallel Ultrasound with Sub-Nyquist Sampling](https://doi.org/10.1109/TUFFC.2018.2817885). _IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control_, 65(5):795–802, 2018.
+3. Garcia D. [Robust smoothing of gridded data in one and higher dimensions with missing values](https://www.biomecardio.com/publis/csda10.pdf). _Computational Statistics & Data Analysis_ 2010; 54:1167-1178.
+4. Garcia D. [A fast all-in-one method for automated post-processing of PIV data](https://www.biomecardio.com/publis/expfluids11.pdf). _Exp Fluids_ 2011; 50:1247-1259.
 
 
 ##### [Time-Frequency Toolbox](https://tftb.nongnu.org/) for the localized time-frequency plots using reassigned pseudo Wigner-Ville distribution (RPWVD) method (tfrrpwv function in the toolbox)
-1. Franqois Auger and Patrick Flandrin. [Improving the Readability of Time-Frequency and Time-Scale Representations by the Reassignment Method](https://doi.org/10.1109/78.382394). IEEE Transactions on Signal Processing, 43(5), 1995.
+1. Franqois Auger and Patrick Flandrin. [Improving the Readability of Time-Frequency and Time-Scale Representations by the Reassignment Method](https://doi.org/10.1109/78.382394). _IEEE Transactions on Signal Processing_, 43(5), 1995.
