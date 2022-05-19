@@ -24,9 +24,14 @@
 %-- 4. Garcia D. A fast all-in-one method for automated post-processing of PIV data
 %-- Exp Fluids 2011; 50:1247-1259.
 %-------------------------------------------------------------------------%
-%-- Set bfParams.DMAS = 0 for DAS beamforming
+%-- Set bfParams.beamApod = 1 and bfParams.DMAS = 0 for DAS beamforming
 %-- Set bfParams.beamApod = 1 and bfParams.DMAS = 1 to reproduce the
 %-- results for nonlinear beamforming reported in our article.
+%-------------------------------------------------------------------------%
+%-- Disclaimer: Please note that this may not be an optimized implementation 
+%-- of the algorithm. To reduce the computational complexity associated
+%-- with the getBeamApod function, the output of the fuction is directly loaded. 
+%-- Please see line #194 and #195.
 %-------------------------------------------------------------------------%
 clear 
 %% Set all the required paths
@@ -50,8 +55,8 @@ datasetName = "PWI_disk_RF";
 % bfParams.beamApod = 1 for double stage apodization
 % bfParams.DMAStype = 0 for conventional architecture
 % bfParams.DMAStype = 1 for simplified architecture
-bfParams.beamApod = 1;
-bfParams.DMAS = 1;
+bfParams.beamApod = 0;
+bfParams.DMAS = 0;
 bfParams.DMAStype = 1; % Donot alter this line: "bfParams.DMAStype = 1"
 
 %% Define the beamforming parameters

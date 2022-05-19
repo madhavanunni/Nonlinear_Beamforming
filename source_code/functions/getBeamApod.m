@@ -1,7 +1,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Code to generate apodization weights for beam apodization              %
 %                                                                        %
-% Author: Madhavanunni A N                                               %
+% This is a modified version of apodization.m function in USTB           %
+% UltraSound ToolBox (https://www.ustb.no/)                              %
+% Originally developed by:                                               %
+%                Alfonso Rodriguez-Molares (alfonso.r.molares@ntnu.no)   %
+%                Olivier Bernard (olivier.bernard@creatis.insa-lyon.fr)  %
+%                                                                        %
+% Modified for channel directive beam synthesis in nonlinear beamforming %
+% by: Madhavanunni A N                                                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function apod = getBeamApod(tof,sysPara,window)
 
