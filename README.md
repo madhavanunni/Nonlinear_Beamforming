@@ -29,7 +29,7 @@ Please follow the below instructions to run the code.
 
 #### ACADEMIC REFERENCES TO BE CITED:
 1. Details of nonlinear beamforming is available in the article by A. N. Madhavanunni and Mahesh Raveendranatha Panicker <br />
-[A Nonlinear Beamforming for Enhanced Spatiotemporal Sensitivity in High Frame Rate Ultrasound Flow Imaging](https://doi.org/10.48550/arXiv.2108.02688)<br />
+[A Nonlinear Beamforming for Enhanced Spatiotemporal Sensitivity in High Frame Rate Ultrasound Flow Imaging](https://doi.org/10.1016/j.compbiomed.2022.105686). _Computers in Biology and Medicine_, (2022): 105686. <br />
 Video results are available at https://www.youtube.com/playlist?list=PLiuuVhVNWBZSYikqhd20FsVr8NTKRlZ4F
 
 2. More details of dual apodization applied to vector flow imaging is available in the following article:<br />
